@@ -94,7 +94,7 @@ Tugas Anda adalah menganalisis materi atau topik yang diberikan oleh pengguna, k
   - "explanation": Penjelasan ilmiah singkat dalam bahasa Indonesia yang menjelaskan mengapa opsi tersebut benar dan mengapa opsi-opsi yang lain kurang tepat atau salah.`;
 
       const response = await ai.models.generateContent({
-        model: "gemini-1.5-flash",
+        model: ""gemini-3.5-flash",
         contents: `Buat kuis berdasarkan input pengguna berikut ini: "${prompt}"`,
         config: {
           systemInstruction: systemInstruction,
