@@ -4,7 +4,7 @@ class AmbientMp3Player {
   private hasPreWarmed: boolean = false;
 
   // We use a highly reliable, relaxing copyright-free ambient instrumental study track
-  private readonly trackUrl = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3";
+  private readonly trackUrl = "https://github.com/LuluMukaromah2305/bwai-product-EduQuiz/blob/fcff054b1ac61b1820c8073bd17ea5e909887ee4/src/Tenxi%2C%20Naykilla%20%26%20Jemsii%20-%20Garam%20%26%20Madu%20(Sakit%20Dadaku)%20(Official%20Music%20Video).mp3";
 
   constructor() {
     this.setupGlobalPrewarm();
