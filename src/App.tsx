@@ -82,12 +82,12 @@ export default function App() {
               <div className="flex gap-3">
                 <AlertCircle className="w-5 h-5 text-red-600 shrink-0 mt-0.5" />
                 <div className="space-y-2">
-                  <h4 className="font-display font-bold text-red-800">Terjadi Kesalahan Server / Kunci API</h4>
+                  <h4 className="font-display font-bold text-red-800">Terjadi Kesalahan Server</h4>
                   <p className="text-red-700 leading-relaxed">
                     {apiError}
                   </p>
                   <p className="text-xs text-red-500 font-medium">
-                    Tips: Pastikan variabel lingkungan <strong>GEMINI_API_KEY</strong> sudah ditambahkan ke panel <strong>Settings &gt; Secrets</strong> dalam AI Studio dengan kunci API Google AI Studio yang valid.
+                    Silakan segarkan halaman atau pilih salah satu preset materi di bawah untuk memproses instan.
                   </p>
                   <button 
                     onClick={() => setApiError(null)}
