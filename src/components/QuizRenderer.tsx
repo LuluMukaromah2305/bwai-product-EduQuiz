@@ -111,10 +111,20 @@ export default function QuizRenderer({ quiz, onReset }: QuizRendererProps) {
               </div>
             </header>
             
-            <div className="p-6 bg-slate-50/50 border-b border-slate-150">
-              <p className="text-xs md:text-[13px] text-slate-500 leading-relaxed">
+            <div className="p-6 bg-slate-50/50 border-b border-slate-150 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <p className="text-xs md:text-[13px] text-slate-500 leading-relaxed max-w-xl">
                 Kuis buatan otomatis ini menguji pemahaman konsep tingkat tinggi (HOTS). Kerjakan keseluruhan soal analisis terstruktur di bawah dengan teliti, lalu kirim nilai Anda.
               </p>
+              <div className="inline-flex items-center gap-2.5 bg-indigo-50/80 border border-indigo-100 px-3.5 py-2 rounded-xl shrink-0 select-none shadow-xs">
+                <div className="flex items-end gap-0.5 h-3">
+                  <span className="w-1 h-2 bg-indigo-600 rounded-full animate-bounce" style={{ animationDelay: '0s', animationDuration: '0.8s' }} />
+                  <span className="w-1 h-3 bg-indigo-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s', animationDuration: '0.8s' }} />
+                  <span className="w-1 h-1.5 bg-indigo-600 rounded-full animate-bounce" style={{ animationDelay: '0.4s', animationDuration: '0.8s' }} />
+                </div>
+                <div className="text-[10px] font-bold text-indigo-700 tracking-wider uppercase font-mono">
+                  🔊 Study Beats Active
+                </div>
+              </div>
             </div>
           </div>
 

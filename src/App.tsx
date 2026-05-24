@@ -3,6 +3,7 @@ import Header from './components/Header';
 import QuizForm from './components/QuizForm';
 import QuizRenderer from './components/QuizRenderer';
 import { QuizData } from './types';
+import { ambientMusic } from './utils/audio';
 import { 
   Sparkles, CheckCircle, BookOpen, AlertCircle, Info, ChevronRight, 
   HelpCircle, Lightbulb, FileSpreadsheet, Compass 
@@ -41,6 +42,8 @@ export default function App() {
         const quizData: QuizData = result.data;
         if (quizData.isValid) {
           setQuiz(quizData);
+          // Automatically fire up the beautiful study ambient loop 
+          ambientMusic.start();
         } else {
           // Input was flagged as too short or confusing
           setValidationError(quizData.validationErrorMessage || "Input terlalu singkat atau tidak valid.");
@@ -63,6 +66,8 @@ export default function App() {
     setValidationError(null);
     setRecommendations(null);
     setApiError(null);
+    // Stop the synthesizer so it is fresh for the next interactive round
+    ambientMusic.cleanup();
   };
 
   return (
